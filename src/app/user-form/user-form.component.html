@@ -1,0 +1,71 @@
+
+
+
+ <div class="d-flex justify-content-end mx-5" *ngIf="this.successForm">
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> You Data submited.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+ </div>
+
+
+
+
+<form [formGroup]="userFormData" class="mx-5 mt-5" (ngSubmit)="onSubmitForm()">
+  <div class="row">
+    <div class="mb-2 col-lg-6 col-md-6 col-sm-6">
+      <input type="text"  formControlName="FirstName"  placeholder="FirstName" class="form-control" id="username" />
+      <div *ngIf="submitted && f['FirstName'].errors" class="invalid-required">
+        <span *ngIf="f['FirstName'].errors['required']"> *First Name is required</span>
+      </div>
+    </div>
+
+    <div class="mb-2 col-lg-6 col-md-6 col-sm-6">
+      <input type="text"  formControlName="LastName"  placeholder="LastName" class="form-control" id="username" />
+      <div *ngIf="submitted && f['LastName'].errors" class="invalid-required">
+        <span *ngIf="f['LastName'].errors['required']"> *First Name is required</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+
+
+    <div class="mb-2 col-lg-6 col-md-6 col-sm-6">
+      <input type="tel"  formControlName="MobileNumber" placeholder="Mobile Number"  class="form-control" id="username" />
+      <div *ngIf="submitted && f['MobileNumber'].errors" class="invalid-required">
+        <span *ngIf="f['MobileNumber'].errors['required']"> *First Name is required</span>
+      </div>
+    </div>
+    <div class="mb-2 col-lg-6 col-md-6 col-sm-6">
+      <input type="tel"  formControlName="phoneNumber" placeholder="phone Number"  class="form-control" id="username" />
+      <div *ngIf="submitted && f['phoneNumber'].errors" class="invalid-required">
+        <span *ngIf="f['phoneNumber'].errors['required']"> *First Name is required</span>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="mb-2 col-lg-12 col-md-12 col-sm-12">
+    <input type="text"  formControlName="address" placeholder="Adress"  class="form-control" id="username" />
+    <div *ngIf="submitted && f['address'].errors" class="invalid-required">
+      <span *ngIf="f['address'].errors['required']"> *First Name is required</span>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="mb-2 col-lg-12 col-md-12 col-sm-12">
+    <textarea class="form-control" placeholder="multi line text area" formControlName="userData" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <div *ngIf="submitted && f['userData'].errors" class="invalid-required">
+      <span *ngIf="f['userData'].errors['required']"> *First Name is required</span>
+    </div>
+  </div>
+</div>
+
+
+    <div class="d-flex justify-content-end">
+      <button type="submit" class="btn border text-light main-bg p-2">Button</button>
+    </div>
+
+  </form>
+
+

@@ -1,0 +1,39 @@
+
+.header-bg{
+  background-color:black !important
+  }
+
+
+.form-control{
+  border: unset !important;
+  border-radius:unset !important;
+   background-color:#7ed857 !important;
+   text-align:center !important;
+   font-size: 16px;
+
+}
+.input:-internal-autofill-selected {
+  background-color:#7ed857 !important;
+}
+.btn{
+  background-color: #37b6ff;
+  padding: 17px 9px;
+  width: 20%;
+  height: 50px;
+  border-radius: 32px;
+}
+.invalid-required {
+  margin: 0;
+}
+.invalid-required span
+{font-size: 10px;
+    color: red;
+    font-weight: 600;
+
+}
+
+
+.alert {
+  width: 40%;
+  font-size: 14px;
+}

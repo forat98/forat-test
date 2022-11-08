@@ -1,0 +1,36 @@
+
+  <div class=" form-signin">
+    <div class="row justify-content-center mt-3">
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card shadow">
+          <div class="card-title text-center border-bottom">
+          <img src="../assets/image/logo.PNG" alt="">
+            <p class="text-muted signin-title fw-bold">Sign in to your account</p>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="signInForm" (ngSubmit)="onSubmitForm()">
+              <div class="mb-2">
+                <label for="username" class="form-label text-muted m-0">Email</label>
+                <input type="text"  formControlName="Email"  class="form-control" id="username" />
+              </div>
+              <div class="mb-2">
+                <label for="password" class="form-label text-muted m-0">Password</label>
+                <input type="password" formControlName="Password" class="form-control" id="password" />
+              </div>
+              <div class="mb-2">
+                <input type="checkbox" class="form-check-input " id="remember" />
+                <label for="remember" class="form-label  fw-bold p-1">Remember Me</label>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn text-light main-bg p-2 ">Sign In</button>
+              </div>
+              <div  class="d-flex justify-content-around form-alternative fw-bold mt-2">
+                <p> Forgot Password </p>
+                <p> Create a new account </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

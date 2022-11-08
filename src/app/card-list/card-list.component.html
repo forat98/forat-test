@@ -1,0 +1,30 @@
+<div class="p-relative">
+  <span class="col-5 m-4">
+    <input
+    placeholder="Filter text"
+    [(ngModel)]="searchText"
+    type="text"
+    class="btn title-search"
+  />
+  </span>
+
+  <div style="margin-right: 8px">
+    <div class="search-results"
+    infinite-scroll
+    [infiniteScrollDistance]="2"
+    [scrollWindow]="false"
+    [infiniteScrollThrottle]="0"
+    (scrolled)="loadMore()">
+
+      <div class="card-contener mt-3" *ngIf="this.listData">
+        <div class="card" *ngFor="let item of this.listData | filter: searchText">
+          <div class="card-body px-0">
+            <h4 class="card-title">{{ item["title"] }}</h4>
+            <p class="card-text">{{ item["description_EN"] }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

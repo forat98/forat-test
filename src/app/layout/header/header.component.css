@@ -1,0 +1,28 @@
+.header-bg{
+  background-color:#737373 ;
+}
+
+
+.logo
+{
+  background: #a6a6a6;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  padding: 4px 26px;
+}
+
+.header{
+  color: #fff;
+}
+
+@media (min-width: 200px) and (max-width: 600px){
+header{
+  height: 130px;
+  flex-direction: column;
+}
+header div{
+  justify-content: center;
+
+}
+}

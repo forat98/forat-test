@@ -1,0 +1,120 @@
+.search-results {
+  height: 78vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  flex: none;
+}
+
+
+.card-contener {
+  display: grid;
+  grid-template-columns: 0fr 0fr 0fr 0fr;
+  height: 100%;
+  gap: 2%;
+  justify-content: center;
+}
+
+.man {
+  height: 100px;
+  overflow-y: scroll;
+}
+
+.card {
+  background: #d9d9d9 !important;
+  height: 226px;
+  width: 170px;
+  border-radius: 24px;
+
+}
+
+.title-search {
+  border-radius: unset;
+  background-color: #d9d9d9;
+  position: absolute;
+  right: 1%;
+  top: 58px;
+}
+
+
+.card-title {
+  background-color: hsl(0deg 0% 65%);
+  text-align: center;
+  font-size: 12px;
+  height: 50px;
+  padding: 15px;
+  margin: 0;
+}
+
+.card-text {
+  font-size: 10px;
+  overflow: hidden;
+  text-align: center;
+  max-height: 134px;
+  padding: 6px;
+  text-overflow: ellipsis;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 60px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d9d9d9;
+}
+
+
+.main-panel {
+  height: 100px;
+  overflow-y: scroll;
+}
+
+
+@media (max-width: 350px) {
+  .card-contener {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .title-search {
+    width: 40%;
+    top: 20%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+  .card-contener {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+  }
+}
+
+@media (min-width: 350px) and (max-width: 500px) {
+  .card-contener {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
+  }
+
+  .title-search {
+    width: 40%;
+    top: 19%;
+  }
+
+  .card {
+    width: 150px;
+  }
+}
