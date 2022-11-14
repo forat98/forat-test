@@ -14,9 +14,9 @@
 <form [formGroup]="userFormData" class="mx-5 mt-5" (ngSubmit)="onSubmitForm()">
   <div class="row">
     <div class="mb-2 col-lg-6 col-md-6 col-sm-6">
-      <input type="text"  formControlName="FirstName"  placeholder="FirstName" class="form-control" id="username" />
-      <div *ngIf="submitted && f['FirstName'].errors" class="invalid-required">
-        <span *ngIf="f['FirstName'].errors['required']"> *First Name is required</span>
+      <input type="text"  formControlName="FirstName" minlength="3"  placeholder="FirstName" class="form-control" id="username" />
+      <div *ngIf="submitted && f['FirstName'].errors && (f['FirstName'].dirty || f['FirstName'].touched)" class="invalid-required">
+      <span *ngIf="f['FirstName'].errors['minlength']"> first name must be more then 3</span>
       </div>
     </div>
 

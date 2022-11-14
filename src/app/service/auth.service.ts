@@ -7,6 +7,7 @@ import { User } from '../interface/interface';
 })
 export class AuthService {
   user: User[] = [{ Email: 'test@test.com', password: 'test' }];
+  
   private isUserLogin: BehaviorSubject<boolean> = new BehaviorSubject(false);
   private pageTitle: Subject<string> = new Subject();
   public page$ = this.pageTitle.asObservable();
@@ -25,7 +26,7 @@ export class AuthService {
   isCurrentUser() {
     if (localStorage.getItem('currentUser')) this.isUserLogin.next(true);
   }
-  
+
   changeTitle(value: string) {
     this.pageTitle.next(value);
   }

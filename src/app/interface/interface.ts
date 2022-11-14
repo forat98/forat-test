@@ -5,7 +5,6 @@ export interface User {
 }
 
 export interface data{
-  indexOf(searchText: string): unknown;
   "title": string,
    "title_EN":string,
    "title_AR":string,

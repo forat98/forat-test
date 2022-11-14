@@ -16,14 +16,20 @@
     [infiniteScrollThrottle]="0"
     (scrolled)="loadMore()">
 
-      <div class="card-contener mt-3" *ngIf="this.listData">
-        <div class="card" *ngFor="let item of this.listData | filter: searchText">
+      <div class="card-contener mt-3" *ngIf="( this.listData | filter : searchText) as listData">
+        <div class="card" *ngFor="let item of listData ">
           <div class="card-body px-0">
             <h4 class="card-title">{{ item["title"] }}</h4>
             <p class="card-text">{{ item["description_EN"] }}</p>
           </div>
+
         </div>
+        <p *ngIf="listData.length===0">No Result</p>
+
       </div>
+
+
+
     </div>
   </div>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { take } from 'rxjs';
 import { ListDataService } from '../service/list-data.service';
 
 
@@ -19,20 +20,23 @@ searchText!: string;
    selector: string = ".main-panel";
 
   ngOnInit() {
+    this._ListDataService.getListData().pipe(take(1)).subscribe(res=>{
+      this.listData=res.slice(0, 12)
+      console.log(this.listData)
 
-    this._ListDataService.getListData().subscribe(res=>{
-     this.listData=res
-    })
+     })
 
   }
 
 
-  loadingThrottle = 3000;
 
   loadMore() {
-    console.log('scrllll')
-        window.setTimeout(() => {
-        }, this.loadingThrottle);
-     
+    console.log(this.listData.length)
+    this._ListDataService.getListData().subscribe(res=>{
+      let newarr:[]=res.slice(this.listData.length, this.listData.length+12)
+      this.listData.push(...newarr)
+     })
+
+
   }
   }
