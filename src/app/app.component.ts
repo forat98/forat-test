@@ -18,9 +18,7 @@ export class AppComponent implements OnInit {
       console.log(state);
       this.isUserLogin = state;
     });
-    this.auth.page$.subscribe(tilte=>{
-      this.pageTitle=tilte;
-    })
+
   }
 
 

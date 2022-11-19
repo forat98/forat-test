@@ -26,9 +26,7 @@ children:[
 
 {
   path:'user-form',
-  component:UserFormComponent,
-  canActivate: [AuthGuard]
-
+  component:UserFormComponent
 },]
 
 },

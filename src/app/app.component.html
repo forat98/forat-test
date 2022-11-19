@@ -1,22 +1,6 @@
 <app-user-login *ngIf="!isUserLogin"></app-user-login>
-<div *ngIf="isUserLogin">
-  <app-header></app-header>
-  <div class="row">
-    <div class="col-lg-3 col-md-3 col-sm-3">
-    <app-side-nav></app-side-nav>
-    </div>
-    <div class="col-lg-9 col-md-9 col-sm-9 mt-1 mr-2" >
+<router-outlet></router-outlet>
 
-     <span col-4>
-      <button *ngIf="pageTitle" class="btn title-button">
-        {{ pageTitle }}
-      </button>
-     </span>
-     <router-outlet></router-outlet>
-
-    </div>
-  </div>
-</div>
 
 
 

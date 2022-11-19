@@ -23,7 +23,7 @@
     <div class="mb-2 col-lg-6 col-md-6 col-sm-6">
       <input type="text"  formControlName="LastName"  placeholder="LastName" class="form-control" id="username" />
       <div *ngIf="submitted && f['LastName'].errors" class="invalid-required">
-        <span *ngIf="f['LastName'].errors['required']"> *First Name is required</span>
+        <span *ngIf="f['LastName'].errors['required']"> *Last Name is required</span>
       </div>
     </div>
   </div>
@@ -33,13 +33,13 @@
     <div class="mb-2 col-lg-6 col-md-6 col-sm-6">
       <input type="tel"  formControlName="MobileNumber" placeholder="Mobile Number"  class="form-control" id="username" />
       <div *ngIf="submitted && f['MobileNumber'].errors" class="invalid-required">
-        <span *ngIf="f['MobileNumber'].errors['required']"> *First Name is required</span>
+        <span *ngIf="f['MobileNumber'].errors['required']"> *Mobile Number  is required</span>
       </div>
     </div>
     <div class="mb-2 col-lg-6 col-md-6 col-sm-6">
       <input type="tel"  formControlName="phoneNumber" placeholder="phone Number"  class="form-control" id="username" />
       <div *ngIf="submitted && f['phoneNumber'].errors" class="invalid-required">
-        <span *ngIf="f['phoneNumber'].errors['required']"> *First Name is required</span>
+        <span *ngIf="f['phoneNumber'].errors['required']"> *phone Number is required</span>
       </div>
     </div>
 </div>
@@ -48,7 +48,7 @@
   <div class="mb-2 col-lg-12 col-md-12 col-sm-12">
     <input type="text"  formControlName="address" placeholder="Adress"  class="form-control" id="username" />
     <div *ngIf="submitted && f['address'].errors" class="invalid-required">
-      <span *ngIf="f['address'].errors['required']"> *First Name is required</span>
+      <span *ngIf="f['address'].errors['required']"> *address is required</span>
     </div>
   </div>
 </div>
@@ -56,7 +56,7 @@
   <div class="mb-2 col-lg-12 col-md-12 col-sm-12">
     <textarea class="form-control" placeholder="multi line text area" formControlName="userData" id="exampleFormControlTextarea1" rows="3"></textarea>
     <div *ngIf="submitted && f['userData'].errors" class="invalid-required">
-      <span *ngIf="f['userData'].errors['required']"> *First Name is required</span>
+      <span *ngIf="f['userData'].errors['required']"> *userData is required</span>
     </div>
   </div>
 </div>
