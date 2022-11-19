@@ -38,7 +38,6 @@ export class UserFormComponent implements OnInit {
       return;
     }
     const dataForm=JSON.stringify(this.userFormData.value, null, 2)
-    console.log(JSON.parse(dataForm))
 
     if(!this.userFormData.invalid){
       this.successForm=true;

@@ -7,34 +7,37 @@ import { HomeComponent } from './home/home/home.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 const routes: Routes = [
-{path:'',component:HomeComponent,
-children:[
   {
-    path:'',redirectTo:'/Home',pathMatch:'full',
-
-  }, {
-  path: 'Home',
-  component:HomeComponent,
-  canActivate: [AuthGuard]
-},
+          path: '',
+          pathMatch: 'full',
+          redirectTo: 'home'
+        },
 {
+  path: '',component:HomeComponent,
+children:[
+{
+
   path: 'card-list',
   component:CardListComponent,
   canActivate: [AuthGuard]
 
 },
-
 {
   path:'user-form',
   component:UserFormComponent
-},]
-
-},
+},]},
   {
     path:'login',
     component:UserLoginComponent
   },
 ];
+
+
+
+
+
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

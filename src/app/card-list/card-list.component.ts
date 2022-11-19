@@ -22,7 +22,6 @@ searchText!: string;
   ngOnInit() {
     this._ListDataService.getListData().pipe(take(1)).subscribe(res=>{
       this.listData=res.slice(0, 12)
-      console.log(this.listData)
 
      })
 
@@ -31,7 +30,6 @@ searchText!: string;
 
 
   loadMore() {
-    console.log(this.listData.length)
     this._ListDataService.getListData().subscribe(res=>{
       let newarr:[]=res.slice(this.listData.length, this.listData.length+12)
       this.listData.push(...newarr)
